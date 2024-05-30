@@ -4,6 +4,8 @@ import { join as joinPath } from 'path';
 import { existsSync, readdirSync, unlinkSync, statSync } from 'fs';
 import dbClient from '../../utils/db';
 
+const DEFAULT_ROOT_FOLDER = 'files_manager';
+
 describe('+ FilesController', () => {
   const baseDir = `${process.env.FOLDER_PATH || ''}`.trim().length > 0
     ? process.env.FOLDER_PATH.trim()

@@ -1,8 +1,8 @@
 import supertest from 'supertest';
 import chai from 'chai';
-import api from '../server';
+import app from '../server';
 
-global.app = api;
-global.request = supertest(api);
+global.app = app;
+global.request = supertest(app);
 global.expect = chai.expect;
 global.assert = chai.assert;
